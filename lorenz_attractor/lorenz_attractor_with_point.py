@@ -38,7 +38,7 @@ ax.set_facecolor('black')
 line, = ax.plot(x, z, lw=0.5, color='#FFD700')  # Gold color in hex
 
 # Set up the point, which is a dot on the graph that will 'walk' along the line
-point, = ax.plot([], [], 'o', color='#FFD700', markersize=3)  # Gold color to match the line
+point, = ax.plot([], [], 'o', color='#FFD700', markersize=1)  # Gold color to match the line
 
 # Set the axis limits
 ax.set_xlim(min(x), max(x))
@@ -53,6 +53,6 @@ def update(frame):
 ani = FuncAnimation(fig, update, frames=len(time_points), interval=10, blit=True)
 
 # Save animation with increased fps for faster playback
-ani.save('lorenz_attractor_xz_plane_with_point.gif', writer='pillow', fps=120)
+ani.save('lorenz_attractor_xz_plane_with_point.gif', writer='pillow', fps=240)
 
 plt.close()
